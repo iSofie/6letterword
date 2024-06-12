@@ -2,7 +2,7 @@
   "profiles": {
     "SDEV.Peripass.WordExcercise": {
       "commandName": "Project",
-      "commandLineArgs": "-i \"C:\\Users\\delaeters\\Downloads\\input.txt\" -c 6"
+      "commandLineArgs": "-i \"C:\\Users\\delaeters\\source\\repos\\Me\\6letterword\\SDEV.Peripass\\SDEV.Peripass.WordExcercise\\Input\\input.txt\" -c 6"
     }
   }
 }

@@ -2,6 +2,8 @@
 using CommandLine;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using SDEV.Peripass.Services;
+using SDEV.Peripass.Services.Contracts;
 using SDEV.Peripass.WordExcercise;
 using SDEV.Peripass.WordExcercise.Models;
 
@@ -43,6 +45,7 @@ static ServiceCollection ConfigureServices(ScriptOptions options)
     var serviceCollection = new ServiceCollection();
 
     serviceCollection.AddTransient<InputAnalysis>();
+    serviceCollection.AddScoped<IFileService, FileService>();
 
     serviceCollection.AddLogging((builder) =>
     {

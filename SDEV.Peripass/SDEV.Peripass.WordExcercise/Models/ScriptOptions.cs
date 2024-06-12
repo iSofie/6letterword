@@ -8,7 +8,7 @@ namespace SDEV.Peripass.WordExcercise.Models
         public string InputFileLocation { get; set; }
 
         [Option('c', "characterCount", Required = true, HelpText = "The amount of characters in the words to form")]
-        public string CharacterCount { get; set; }
+        public int CharacterCount { get; set; }
 
         public static ScriptOptions RunOptionsAndReturnExitCode(ScriptOptions options)
         {
