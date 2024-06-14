@@ -25,7 +25,7 @@ using (var serviceProvider = serviceCollection.BuildServiceProvider())
         try
         {
             InputAnalysis inputAnalyser = serviceProvider.GetService<InputAnalysis>();
-            inputAnalyser.Start(scriptOptions).Wait();
+            inputAnalyser.Start(scriptOptions);
         }
         catch (Exception e)
         {

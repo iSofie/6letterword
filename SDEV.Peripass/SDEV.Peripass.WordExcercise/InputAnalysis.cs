@@ -17,7 +17,7 @@ namespace SDEV.Peripass.WordExcercise
             _fileService = fileService;
         }
 
-        public async Task Start(ScriptOptions options)
+        public void Start(ScriptOptions options)
         {
             try
             {   // Retrieve file content
@@ -26,14 +26,14 @@ namespace SDEV.Peripass.WordExcercise
                 var distrinctWords = words.Distinct().ToList();
                 _logger.LogInformation("Found {0} distrinct words in the input file", distrinctWords.Count);
 
-                await ProcessWords(options.CharacterCount, distrinctWords);
+                ProcessWords(options.CharacterCount, distrinctWords);
             } catch (Exception ex)
             {
                 _logger.LogError("Something went wrong processing the input file: {0}", ex.Message);
             }
         }
 
-        public async Task ProcessWords(int characterCount, List<string> words)
+        public void ProcessWords(int characterCount, List<string> words)
         {
 
             // Filter out all word options for the outcomes
@@ -43,7 +43,7 @@ namespace SDEV.Peripass.WordExcercise
             
             foreach (var word in potentialOutcomes)
             {
-                WordUtility.FindCombinations(word, wordSnippets).ToList();
+                WordUtility.FindCombinations(word, wordSnippets);
             }
         }
     }
